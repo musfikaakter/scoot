@@ -1,0 +1,53 @@
+@use "../util/mixin" as b;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.375rem;
+  position: sticky;
+
+  &__bar {
+    width: 1.4rem;
+    cursor: pointer;
+
+    @include b.breakpoint(md) {
+        display: none;
+    }
+  }
+
+  &__logo {
+    width: 4.6875rem;
+
+    @include b.breakpoint(md) {
+      width: 6.75rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: -14%;
+
+    & a {
+      font-size: var(--size-sm);
+      font-weight: 700;
+      color: var(--color-grey);
+    }
+
+    @include b.breakpoint-down(md) {
+        display: none;
+    }
+
+    @include b.breakpoint(lg) {
+      margin-left: -70%;
+    }
+  }
+
+  &__button {
+    @include b.breakpoint-down(md) {
+        display: none;
+    }
+  }
+}

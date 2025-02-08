@@ -1,0 +1,129 @@
+@use "../util/mixin" as b;
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Mono:wght@400;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 100%;
+  // font-family: "Lexend Deca", serif, Arial, Helvetica, sans-serif;
+  font-family: "Space Mono", serif, Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.5625rem;
+  font-weight: 400;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  background-repeat: no-repeat;
+  user-select: none;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+
+  @include b.breakpoint(sm) {
+    max-width: 23.4375em;
+  }
+  @include b.breakpoint(md) {
+    max-width: 48em;
+  }
+  @include b.breakpoint(lg) {
+    max-width: 80em;
+  }
+}
+
+.btn {
+  padding: 0.8rem 2.8rem;
+  font-size: var(--size-base);
+  outline: none;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border: 2px solid var(--color-orange);
+  transition: background-color 200ms, color 200ms;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--color-orange);
+  border: 2px solid var(--color-orange);
+}
+
+.hero__title {
+  color: var(--color-white);
+  font-size: var(--size-xlg);
+
+  @include b.breakpoint(md) {
+    font-size: var(--size-3xl);
+  }
+}
+
+.section__title {
+  color: var(--color-dark);
+  font-size: var(--size-2xbase);
+  line-height: var(--size-2xbase);
+
+  @include b.breakpoint(md) {
+    font-size: var(--size-2xl);
+    line-height: var(--size-2xl);
+  }
+}
+
+.hero__description {
+  color: var(--color-white);
+  font-size: var(--size-sm);
+
+  @include b.breakpoint(lg) {
+    font-size: var(--size-base);
+  }
+}
+
+.section__description {
+  color: var(--color-dark);
+  font-size: var(--size-sm);
+
+  @include b.breakpoint(lg) {
+    font-size: var(--size-base);
+  }
+}

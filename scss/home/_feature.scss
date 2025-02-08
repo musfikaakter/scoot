@@ -1,0 +1,83 @@
+@use "../util/mixin" as b;
+
+.feature {
+  padding: 7rem 1rem 0;
+  position: relative;
+
+  &__box {
+    @include b.breakpoint(lg) {
+      display: flex;
+    }
+  }
+
+  &__path {
+    width: 1rem;
+    height: 32rem;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    @include b.breakpoint-down(md) {
+      display: none;
+    }
+    @include b.breakpoint(lg) {
+      width: 70rem;
+      height: 1rem;
+      left: -14%;
+      top: 28%;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    display: grid;
+    place-content: center;
+    gap: 1.6rem;
+    margin-bottom: 3.4rem;
+
+    @include b.breakpoint(md) {
+      display: flex;
+      gap: 4rem;
+    }
+
+    @include b.breakpoint(lg) {
+      flex-direction: column;
+      gap: 4rem;
+      padding: 0 2rem;
+    }
+
+    &-details {
+      @include b.breakpoint(md) {
+        text-align: left;
+      }
+    }
+
+    &-img {
+      width: 3.5rem;
+      margin-inline: auto;
+
+      & img {
+        width: 100%;
+      }
+
+      @include b.breakpoint(md) {
+        width: 12rem;
+        margin-left: -5%;
+      }
+      @include b.breakpoint(lg) {
+        width: 6rem;
+        margin-left: 0;
+      }
+    }
+
+    &-title {
+      color: var(--color-dark);
+      font-size: var(--size-xmd);
+      margin-bottom: 1.6rem;
+
+      @include b.breakpoint(md) {
+        font-size: var(--size-md);
+      }
+    }
+  }
+}

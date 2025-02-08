@@ -1,0 +1,77 @@
+@use "../util/mixin" as b;
+
+.footer {
+  text-align: center;
+  background-color: var(--color-footer);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @include b.breakpoint(md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+&__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+&__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+  &__logo {
+    width: 4.6875rem;
+    margin-bottom: 0.4rem;
+
+    @include b.breakpoint(md) {
+      width: 6.75rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__menu {
+    text-align: center;
+
+    & > * {
+      margin-top: 1rem;
+      @include b.breakpoint(md) {
+        margin-top: 0;
+      }
+    }
+
+    & a {
+      font-size: var(--size-sm);
+      font-weight: 700;
+      color: var(--color-grey);
+    }
+
+    @include b.breakpoint(md) {
+        display: flex;
+        gap: 1.6rem;
+        align-items: center;
+        margin-left: 6rem;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+    margin-top: 4.4rem;
+
+    &>* {
+        width: 1.5rem;
+        height: auto;
+    }
+
+    @include b.breakpoint(md) {
+        margin-top: 0;
+    }
+  }
+}

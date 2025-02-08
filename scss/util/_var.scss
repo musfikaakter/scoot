@@ -1,0 +1,21 @@
+:root {
+  --size-sm: 0.9375rem;
+  --size-base: 1rem;
+  --size-xmd: 1.25rem; //20
+  --size-md: 1.5rem; //24
+  --size-2xbase: 2rem;
+  --size-lg: 2rem; //38
+  --size-xlg: 2.5rem; //40
+  --size-2xl: 3rem; //48
+  --size-3xl: 3.5rem; //56
+
+  /* colors */
+  --color-orange: hsl(40, 97%, 58%);
+  --color-dark: #4a5668;
+  --color-grey: hsl(217, 12%, 62%);
+  --color-light: hsl(212, 41%, 93%);
+  --color-snow: hsl(214, 37%, 96%);
+  --color-pink: hsl(39, 100%, 94%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-footer: hsl(215, 14%, 23%);
+}

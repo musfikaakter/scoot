@@ -1,0 +1,151 @@
+@use "../util/mixin" as b;
+
+.service {
+  padding-top: 7rem;
+
+  &__item-1 {
+    margin-bottom: 5rem;
+    @include b.breakpoint(lg) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      gap: 10rem;
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__item-2 {
+    margin-bottom: 5rem;
+    @include b.breakpoint(lg) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10rem;
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__item-3 {
+    @include b.breakpoint(lg) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      gap: 10rem;
+    }
+  }
+
+  // inner content
+
+  &__img-item {
+    width: 19.5rem;
+    position: relative;
+    margin-inline: auto;
+
+    @include b.breakpoint(md) {
+      width: 27.8125rem;
+    }
+
+    &-circle-right {
+      @include b.breakpoint-down(sm) {
+        display: none;
+      }
+
+      position: absolute;
+      top: 0;
+      right: -42%;
+      height: 27.8125rem;
+      width: auto;
+    }
+
+    &-circle-left {
+      @include b.breakpoint-down(sm) {
+        display: none;
+      }
+
+      position: absolute;
+      top: 0;
+      left: -42%;
+      height: 27.8125rem;
+      width: auto;
+    }
+
+    &-arrow-top {
+      width: 22rem;
+      position: absolute;
+      top: 56%;
+      z-index: 1;
+
+      @include b.breakpoint(md) {
+        width: 45.875rem;
+        top: 66%;
+        left: -22%;
+      }
+    }
+
+    &-arrow-left {
+      width: 20rem;
+      position: absolute;
+      top: -5%;
+      left: -13%;
+      z-index: 1;
+
+      @include b.breakpoint(md) {
+        width: 26rem;
+        top: 0;
+        left: -44%;
+      }
+    }
+
+    &-arrow-right {
+      position: absolute;
+      width: 15rem;
+      top: 0;
+      right: -12%;
+      z-index: 1;
+
+      @include b.breakpoint(md) {
+        width: 24rem;
+        top: 20%;
+        right: -42%;
+      }
+    }
+  }
+
+  &__details {
+    text-align: center;
+    margin-top: 4rem;
+
+    @include b.breakpoint(lg) {
+      text-align: left;
+      margin-top: 0;
+    }
+
+    & > * {
+      margin-bottom: 2.2rem;
+    }
+
+    &-title {
+      width: 78%;
+      margin-inline: auto;
+
+      @include b.breakpoint(lg) {
+        width: 60%;
+        margin-inline: 0;
+      }
+    }
+
+    &-description {
+      @include b.breakpoint(md) {
+        width: 80%;
+        margin-inline: auto;
+      }
+
+      @include b.breakpoint(lg) {
+        margin-inline: 0;
+        width: 100%;
+      }
+    }
+  }
+}

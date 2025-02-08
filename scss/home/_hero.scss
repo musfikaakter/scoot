@@ -1,0 +1,128 @@
+@use "../util/mixin" as b;
+
+.hero {
+  background-image: url("../../assets/hero-mobile.png");
+  background-size: cover;
+  width: 100%;
+  height: 40.625rem;
+  position: relative;
+  z-index: 0;
+
+  @include b.breakpoint(md) {
+    background: url("../../assets/hero-tablet.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @include b.breakpoint(lg) {
+    background: url("../../assets/hero-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__content {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 1;
+    padding-top: 24%;
+
+    @include b.breakpoint(md) {
+      padding-top: 10%;
+    }
+
+    @include b.breakpoint-down(lg) {
+      text-align: center;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: hsla(216, 17%, 35%, 0.8);
+  }
+
+  &__title-home {
+    @include b.breakpoint(md) {
+      width: 70%;
+    }
+
+    @include b.breakpoint(lg) {
+      width: 42%;
+      margin-left: -36%;
+    }
+  }
+
+  &__description-home {
+    @include b.breakpoint(md) {
+      width: 70%;
+    }
+
+    @include b.breakpoint(lg) {
+      width: 44%;
+      margin-left: -20%;
+    }
+  }
+
+  &__btn-home {
+    @include b.breakpoint(lg) {
+      margin-left: -51%;
+    }
+  }
+
+  &__image-mobile {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    bottom: 1.75rem;
+    width: 8rem;
+
+    @include b.breakpoint(md) {
+      width: 22rem;
+      bottom: 2.4rem;
+    }
+
+    @include b.breakpoint(lg) {
+      left: 62%;
+      bottom: 12rem;
+    }
+  }
+
+  &__path-home {
+    @include b.breakpoint-down(lg) {
+      display: none;
+    }
+    @include b.breakpoint(lg) {
+      display: block;
+      width: 11rem;
+      position: absolute;
+      left: 0;
+      bottom: 18rem;
+    }
+  }
+
+  &__circle-home {
+    @include b.breakpoint-down(md) {
+      display: none;
+    }
+
+    @include b.breakpoint(md) {
+      display: block;
+      width: 14.625rem;
+      position: absolute;
+      right: -1.875rem;
+      bottom: 3.4rem;
+    }
+
+    @include b.breakpoint(lg) {
+      right: 4rem;
+      bottom: 3rem;
+    }
+  }
+}
