@@ -14,16 +14,35 @@
     <script>
       0;
     </script>
+    <!-- // mobile menu // -->
+    <div class="mobile__menu">
+      <div class="mobile__menu-cross">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+          <path
+            fill="#FCB72B"
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+          />
+        </svg>
+      </div>
+      <nav class="mobile__menu-nav">
+        <ul class="mobile__menu-nav-item">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+        <button class="btn">Get Scootin</button>
+      </nav>
+    </div>
     <!-- rest of the code -->
     <header class="header container">
-      <div class="header__bar">
+      <a class="header__bar" id="header__bar">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <path
             fill="#FCB72B"
             d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
           />
         </svg>
-      </div>
+      </a>
       <div>
         <a href="#">
           <img class="header__logo" src="./assets/scoot.png" alt="logo" />
@@ -40,22 +59,20 @@
     </header>
     <main>
       <!-- // hero section starts // -->
-      <div class="hero">
+      <section class="home-hero">
         <div class="container">
-          <div class="hero__overlay"></div>
-          <!-- content -->
-          <div class="hero__content">
-            <h1 class="hero__title hero__title-home">
+          <div class="home-hero__content">
+            <h1 class="hero__title home-hero__title-home">
               Scooter sharing made simple
             </h1>
-            <p class="hero__description hero__description-home">
+            <p class="hero__description home-hero__description-home">
               Scooter sharing made simple Scoot takes the hassle out of urban
               mobility. Our bikes are placed in convenient locations in each of
               our cities. Use our app to locate the nearest bike, unlock it with
               a tap, and you’re away!
             </p>
-            <button class="btn hero__btn-home">Get Scootin</button>
-            <div class="hero__image">
+            <button class="btn home-hero__btn-home">Get Scootin</button>
+            <div class="home-hero__image">
               <picture>
                 <source
                   media="(min-width: 80em)"
@@ -66,28 +83,23 @@
                   srcset="./assets/hero-arrow-tablet-home.png"
                 />
                 <img
-                  class="hero__image-mobile"
+                  class="home-hero__image-mobile"
                   src="./assets/hero-arrow-mobile-home.png"
                   alt=""
                 />
               </picture>
               <img
-                class="hero__path-home"
+                class="home-hero__path-home"
                 src="./assets/hero-path-home.png"
-                alt=""
-              />
-              <img
-                class="hero__circle-home"
-                src="./assets/circle-home.png"
                 alt=""
               />
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- // hero section ends // -->
       <!-- // feature section starts // -->
-      <div class="feature container">
+      <section class="feature container">
         <img
           class="feature__path"
           src="./assets/feature-path-tablet.png"
@@ -134,10 +146,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- // feature section ends // -->
       <!-- // service section starts // -->
-      <div class="service container">
+      <section class="service container">
         <div class="service__item-1">
           <div class="service__img">
             <div class="service__img-item">
@@ -243,10 +255,10 @@
             <button class="btn">Learn More</button>
           </div>
         </div>
-      </div>
+      </section>
       <!-- // service section ends // -->
       <!-- // signup section starts // -->
-      <div class="signup">
+      <section class="signup">
         <div class="container signup__wrapper">
           <span class="signup__details">Sign up and Scoot off today</span>
           <div class="signup__content">
@@ -274,7 +286,7 @@
             </a>
           </div>
         </div>
-      </div>
+      </section>
       <!-- // signup section ends // -->
     </main>
     <footer class="footer">

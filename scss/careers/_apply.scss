@@ -1,0 +1,41 @@
+@use "../util/mixin" as b;
+
+.apply {
+  padding-top: 7rem;
+
+  &__wrapper {
+    text-align: center;
+
+    @include b.breakpoint(md) {
+      text-align: left;
+    }
+
+    &-item {
+      background-color: var(--color-snow);
+      padding: 2.6rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      @include b.breakpoint(md) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-title {
+        font-size: var(--size-xmd);
+        color: var(--color-dark);
+        margin-bottom: 0.6rem;
+
+        @include b.breakpoint(md) {
+          font-size: var(--size-md);
+        }
+      }
+    }
+  }
+
+  &__wrapper .apply__wrapper-item:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}

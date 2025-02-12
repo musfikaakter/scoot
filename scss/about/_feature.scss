@@ -1,0 +1,140 @@
+@use "../util/mixin" as b;
+
+.about-feature {
+  padding-top: 4rem;
+
+  &__item-1 {
+    margin-bottom: 7rem;
+    @include b.breakpoint(lg) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__item-2 {
+    @include b.breakpoint(lg) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14rem;
+    }
+  }
+
+  // inner content
+  
+  &__images-item {
+    position: relative;
+    margin-inline: auto;
+    text-align: center;
+
+    &-circle-right {
+      display: none;
+
+      @include b.breakpoint(md) {
+        display: block;
+        height: 27.8125rem;
+        width: auto;
+        position: absolute;
+        right: -5%;
+      }
+
+      @include b.breakpoint(lg) {
+        right: -32%;
+      }
+    }
+
+    &-circle-left {
+      display: none;
+
+      @include b.breakpoint(md) {
+        display: block;
+        height: 27.8125rem;
+        width: auto;
+        position: absolute;
+        left: -5%;
+      }
+
+      @include b.breakpoint(lg) {
+        left: -32%;
+      }
+    }
+
+    &-img {
+      width: 19.5rem;
+      height: auto;
+      margin-inline: auto;
+
+      @include b.breakpoint(md) {
+        width: 27.8125rem;
+      }
+    }
+
+    &-arrow-right {
+      width: auto;
+      height: 9.6rem;
+      position: absolute;
+      bottom: 13%;
+      left: 0;
+
+      @include b.breakpoint(md) {
+        width: 47rem;
+        bottom: 6%;
+        left: 3%;
+      }
+
+      @include b.breakpoint(lg) {
+        left: -26%;
+      }
+    }
+
+    &-arrow-left {
+      width: auto;
+      height: 9.6rem;
+      position: absolute;
+      right: 3%;
+      top: -3%;
+
+      @include b.breakpoint(md) {
+        top: 0;
+        left: -5%;
+      }
+
+      @include b.breakpoint(lg) {
+        left: -32%;
+      }
+    }
+  }
+
+  // details
+
+  &__details {
+    text-align: center;
+    margin-top: 3.6rem;
+
+    @include b.breakpoint(lg) {
+      text-align: left;
+      margin-top: 0;
+    }
+
+    &-title {
+      margin-bottom: 1.4rem;
+
+      @include b.breakpoint(md) {
+        width: 74%;
+        margin-inline: auto;
+      }
+
+      @include b.breakpoint(lg) {
+        margin-inline: 0;
+      }
+    }
+
+    &-description {
+        @include b.breakpoint(lg) {
+            width: 70%;
+        }
+    }
+  }
+}

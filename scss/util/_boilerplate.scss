@@ -6,7 +6,6 @@ html {
   scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 100%;
-  // font-family: "Lexend Deca", serif, Arial, Helvetica, sans-serif;
   font-family: "Space Mono", serif, Arial, Helvetica, sans-serif;
 }
 
@@ -120,7 +119,7 @@ img {
 }
 
 .section__description {
-  color: var(--color-dark);
+  color: var(--color-grey);
   font-size: var(--size-sm);
 
   @include b.breakpoint(lg) {

@@ -5,6 +5,7 @@
 
   &__item-1 {
     margin-bottom: 5rem;
+    
     @include b.breakpoint(lg) {
       display: flex;
       align-items: center;

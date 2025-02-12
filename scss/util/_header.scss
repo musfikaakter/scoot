@@ -12,7 +12,7 @@
     cursor: pointer;
 
     @include b.breakpoint(md) {
-        display: none;
+      display: none;
     }
   }
 
@@ -37,7 +37,7 @@
     }
 
     @include b.breakpoint-down(md) {
-        display: none;
+      display: none;
     }
 
     @include b.breakpoint(lg) {
@@ -47,7 +47,7 @@
 
   &__button {
     @include b.breakpoint-down(md) {
-        display: none;
+      display: none;
     }
   }
 }

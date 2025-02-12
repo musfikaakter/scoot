@@ -1,0 +1,33 @@
+@use "../util/mixin" as b;
+
+.value {
+  text-align: center;
+  padding-top: 7rem;
+
+&__wrapper {
+    @include b.breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+  &__item {
+    margin-top: 4rem;
+    &-img {
+      width: 15rem;
+      height: auto;
+    }
+
+    &-details {
+      margin-top: 1.4rem;
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
+
+      &-title {
+        margin-bottom: 2rem;
+        font-size: var(--size-md);
+        color: var(--color-dark);
+      }
+    }
+  }
+}

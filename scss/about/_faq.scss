@@ -1,0 +1,87 @@
+@use "../util/mixin" as b;
+
+.faq {
+  text-align: center;
+  padding-top: 7rem;
+
+  &__item {
+    @include b.breakpoint(lg) {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+
+    &-title {
+      font-size: var(--size-md);
+      color: var(--color-dark);
+      margin-top: 4.4rem;
+      margin-bottom: 2.4rem;
+
+      @include b.breakpoint(md) {
+        font-size: var(--size-xlg);
+      }
+    }
+
+    &-wrapper {
+      background-color: var(--color-snow);
+      width: 100%;
+      text-align: left;
+      padding: 0.4rem 0.6rem;
+      border-radius: 0.4rem;
+      margin-bottom: 1rem;
+      list-style-type: symbols("+");
+      overflow: hidden;
+      cursor: pointer;
+      transition: background-color 200ms;
+
+      @include b.breakpoint(md) {
+        padding: 0.8rem 1rem;
+      }
+      
+      @include b.breakpoint(lg) {
+        width: 32.25rem;
+      }
+
+      &-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.4rem;
+
+        .faq-title {
+          font-size: var(--size-base);
+          color: var(--color-dark);
+
+          @include b.breakpoint(md) {
+            font-size: var(--size-md);
+          }
+        }
+
+        .faq-angle {
+          width: var(--size-xmd);
+        }
+      }
+
+      // description
+
+      .faq__description {
+        font-size: var(--size-sm);
+        color: var(--color-dark);
+        font-family: "Lexend Deca", serif, Arial, Helvetica, sans-serif;
+        transition: block-size 2000ms;
+      }
+    }
+
+    &-wrapper:hover {
+      background-color: var(--color-pink);
+    }
+
+    summary::marker {
+      content: none;
+    }
+  }
+
+  &__item-2 {
+    margin-top: 2rem;
+  }
+}
