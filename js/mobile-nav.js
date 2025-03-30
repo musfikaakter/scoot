@@ -1,39 +1,37 @@
-// mobile nav
+// open mobile nav
 
-const initMobileNav = () => { // Renamed to avoid confusion
-    const headerBtn = document.getElementById("header__bar");
-    const mobileMenu = document.querySelector(".mobile__menu"); // Renamed to mobileMenu
-  
-    if (headerBtn && mobileMenu) { // Check if elements exist
-      headerBtn.addEventListener("click", () => {
-        mobileMenu.style.display = (mobileMenu.style.display === "grid") ? "none" : "grid"; // Toggle
-      });
+const menuBar = document.querySelectorAll(".header__bar");
+const mobileMenu = document.querySelector(".mobile__menu");
+
+let isMobileMenuOpen = false;
+
+menuBar.forEach((open) => {
+  open.addEventListener("click", openMenu = () => {
+    isMobileMenuOpen = !isMobileMenuOpen;
+    
+    if (isMobileMenuOpen) {
+      mobileMenu.style.display = "grid";
     } else {
-      console.error("Header button or mobile menu not found!"); // Handle missing elements
+      mobileMenu.style.display = "none";
     }
-  };
-  
-  initMobileNav(); // Call the function (renamed)
+
+  });
+});
+
+// close mobile nav
+
+const closeMobileMenu = document.querySelectorAll(".menu__close");
+
+closeMobileMenu.forEach((cross) => {
+  cross.addEventListener("click", closeMenu = () => {
+
+    mobileMenu.style.display = "none";
+    isMobileMenuOpen = false;
+
+  });
+});
 
 
 
-// const mobileNav = () => {
-//   const headerBtn = document.getElementById("header__bar");
-//   const mobileMenu = document.querySelector(".mobile__menu");
 
-//   let isMobileMenuOpen = false;
 
-//   headerBtn.addEventListener("click", () => {
-//     isMobileMenuOpen = !isMobileMenuOpen;
-
-//     if (isMobileMenuOpen) {
-//       mobileMenu.style.display = "grid";
-//       document.body.style.overflowY = "hidden";
-//     } else {
-//       mobileMenu.style.display = "none";
-//       document.body.style.overflowY = "auto";
-//     }
-//   });
-// };
-
-// mobileNav();
