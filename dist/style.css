@@ -10,6 +10,8 @@
   z-index: 11111;
   display: none;
   overflow: hidden;
+  transform: translateX(-100%);
+  transition: 600ms linear;
 }
 .mobile__menu-nav {
   height: 60%;
@@ -42,6 +44,11 @@
 .mobile__menu-cross svg {
   width: 1.4rem;
   cursor: pointer;
+}
+
+.slider {
+  display: block;
+  transform: translateX(0%);
 }
 
 html {

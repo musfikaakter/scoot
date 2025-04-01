@@ -11,6 +11,8 @@
   z-index: 11111;
   display: none;
   overflow: hidden;
+  transform: translateX(-100%);
+  transition: 600ms linear;
 
   &-nav {
     height: 60%;
@@ -51,5 +53,8 @@
   }
 }
 
-
+.slider {
+  display: block;
+  transform: translateX(0%);
+}
 

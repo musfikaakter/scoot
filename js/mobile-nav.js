@@ -8,6 +8,7 @@ let isMobileMenuOpen = false;
 menuBar.forEach((open) => {
   open.addEventListener("click", openMenu = () => {
     isMobileMenuOpen = !isMobileMenuOpen;
+    mobileMenu.classList.add("slider");
     
     if (isMobileMenuOpen) {
       mobileMenu.style.display = "grid";
@@ -27,6 +28,7 @@ closeMobileMenu.forEach((cross) => {
 
     mobileMenu.style.display = "none";
     isMobileMenuOpen = false;
+    mobileMenu.classList.remove("slider");
 
   });
 });
